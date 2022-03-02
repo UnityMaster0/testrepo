@@ -16,4 +16,6 @@ y.printname()
 
 z = Person("Dian", "Nao")
 z.printname()
+
+c = Person("Unity", "Master")
         
