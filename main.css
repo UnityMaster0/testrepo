@@ -17,5 +17,12 @@
 
 }
 
+#banner:hover {
+ 
+    color: red;
+    font-size: 30px;
+    
+}
+
 #panel {overflow: auto; background-color: gray; opacity: 0.5; height: 800px; width: 95%; margin: 30px;}
 
