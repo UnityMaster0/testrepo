@@ -29,7 +29,6 @@ float divide(float div1, float div2) {
   
 }
 
-
 int main() {
   
   float value1, value2;
@@ -43,23 +42,23 @@ int main() {
     
     if ((operation.compare("quit")) == 0) {
       flag = false;
-    } else if ((operation.compare("add")) == 0) or ((operation.compare("subtract")) == 0) or ((operation.compare("multiply")) == 0) or ((operation.compare("divide")) == 0) {
-      cout << "What is the first value?: ";
+    } else if ((operation.compare("add") == 0) or (operation.compare("subtract") == 0) or (operation.compare("multiply") == 0) or (operation.compare("divide") == 0)) {
+      cout << "What is your first value?: ";
       cin >> value1;
-      cout << "What is the second value?: ";
+      cout << "What is your second value?: ";
       cin >> value2;
     } else {
-      cout << "Error, invaild input";
+      cout << "Error, invaild input\n\n";
     }
     
     if ((operation.compare("add")) == 0) {
-      cout << "Answer: " << add(value1, value2);
+      cout << "Answer: " << add(value1, value2) << "\n\n";
     } else if ((operation.compare("subtract")) == 0) {
-      cout << "Answer: " << subtract(value1, value2);
-    } else if ((operation.compare("multipy")) == 0) {
-      cout << "Answer: " << multiply(value1, value2);
+      cout << "Answer: " << subtract(value1, value2) << "\n\n";
+    } else if ((operation.compare("multiply")) == 0) {
+      cout << "Answer: " << multiply(value1, value2) << "\n\n";
     } else if ((operation.compare("divide")) == 0) {
-      cout << "Answer: " << divide(value1, value2);
+      cout << "Answer: " << divide(value1, value2) << "\n\n";
     }
       
   }
