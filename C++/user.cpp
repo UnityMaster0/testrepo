@@ -6,6 +6,7 @@ class Person {
     public:
         string first_name;
         string last_name;
+        int phone_number;
 
         void set_name() {
             
@@ -15,7 +16,6 @@ class Person {
             cout << "What is the last name?: ";
             cin >> last_name;
 
-
         }
 
         void print_name() {
@@ -24,6 +24,45 @@ class Person {
 
         }
             
+};
+
+class Worker : public Person {
+
+    public:
+
+        string job;
+
+        void set_job() {
+
+            cout << "Set the job: ";
+            cin >> job;
+
+        }
+
+        string print_job() {
+
+            cout << first_name << " " << last_name << "'s job is " << job;
+            return job;
+
+        }
+
+    private:
+
+        int salary;
+
+        void set_salary() {
+
+            cout << "Set the salary: ";
+            cin >> salary;
+
+        }
+
+        int print_salary() {
+
+            cout << first_name << " " << last_name << "'s salary is " << salary;
+            return salary;
+
+        }
 };
 
 int main() {

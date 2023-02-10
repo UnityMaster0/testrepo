@@ -8,6 +8,13 @@ float add(float add1, float add2) {
   
 }
 
+long add(long add1, long add2) {
+
+  float sum = add1 + add2;
+  return sum;
+  
+}
+
 float subtract(float sub1, float sub2) {
 
   float difference = sub1 - sub2;
