@@ -41,3 +41,9 @@ while running == True:
     elif selector == 'view':
         
         employee.list_all()
+
+    elif selector == "quit":
+        running = False
+
+    else:
+        print("Invalid input")

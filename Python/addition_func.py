@@ -7,4 +7,4 @@ def add(*number):
         
     print(base)
 
-add(*list(map(int,input("Enter the numbers (Put spaces between the numbers): ").split())))
+add(*list(map(float,input("Enter the numbers (Put spaces between the numbers): ").split())))
