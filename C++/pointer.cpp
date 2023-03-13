@@ -2,8 +2,7 @@
 using namespace std;
 
 int main() {
-    int* var;
-    var = new int;
+    int* var = new int;
     *var = 12;
 
     cout << "The value of 'var' is " << *var << endl;
