@@ -1,5 +1,8 @@
 import time
 
-start_time = time.time()
+def start():
+    global start_time
+    start_time = time.time()
 
-print("Your program took {} seconds to run".format(time.time() - start_time))
+def end():
+    print("Your program took {} seconds to run".format(time.time() - start_time))
