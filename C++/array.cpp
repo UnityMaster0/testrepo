@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-
+int main()
+{
     // A 1D array
     string array1d[] = {"Hello", ", ", "World", "!"};
     cout << array1d[0] << array1d[1] << array1d[2] << array1d[3] << endl;
@@ -26,7 +26,8 @@ int main() {
         }
     };                                                                
 
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 2; i++)
+    {
         for (int u = 0; u < 2; u++) {
             for (int y = 0; y < 5; y++) {
                 cout << array3d[i][u][y] << endl;
