@@ -7,23 +7,23 @@ class Employee:
         self.pay = pay
         self.phone = phone
 
-    def list_name(self):
+    def listName(self):
         print('Name:', self.name)
 
-    def print_phone_number(self):
+    def printPhoneNumber(self):
         print('Phone Number:', '({}{}{}) {}{}{}-{}{}{}{}'.format(*self.phone))
 
-    def list_job(self):
+    def listJob(self):
         print('Job:', self.job)
 
-    def list_pay(self):
+    def listPay(self):
         print('Pay:', self.pay)
 
-    def list_all(self):
-        self.list_name()
-        self.print_phone_number()
-        self.list_job()
-        self.list_pay()
+    def listAll(self):
+        self.listName()
+        self.printPhoneNumber()
+        self.listJob()
+        self.listPay()
         print('')
 
 running = True
@@ -40,7 +40,7 @@ while running == True:
 
     elif selector == 'view':
         
-        employee.list_all()
+        employee.listAll()
 
     elif selector == "quit":
         running = False

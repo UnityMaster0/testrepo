@@ -1,7 +1,7 @@
 .global _start
 .intel_syntax
-.section .text
 
+.section .text
 _start:
 
         mov %eax, 4

@@ -1,5 +1,5 @@
-def create_phone_number(n):
+def createPhoneNumber(n):
 
     print('({}{}{}) {}{}{}-{}{}{}{}'.format(*n))
         
-create_phone_number([6,1,7,6,4,2,9,4,2,1])
+createPhoneNumber([6,1,7,6,4,2,9,4,2,1])

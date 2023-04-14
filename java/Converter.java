@@ -47,14 +47,14 @@ public class Converter {
 
         scanner1.close();
 
-        int parsed_value = Integer.parseInt(value);
+        int parsedValue = Integer.parseInt(value);
 
         if (convertingFrom.equals("g")) {
-            System.out.println(gram(parsed_value, convertingTo));
+            System.out.println(gram(parsedValue, convertingTo));
         } else if (convertingFrom.equals("oz")) {
-            System.out.println(ounce(parsed_value, convertingTo));
+            System.out.println(ounce(parsedValue, convertingTo));
         } else if (convertingFrom.equals("m")) {
-            System.out.println(meter(parsed_value, convertingTo));
+            System.out.println(meter(parsedValue, convertingTo));
         } else {
             System.out.println("Error");
         }

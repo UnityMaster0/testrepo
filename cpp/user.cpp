@@ -5,22 +5,22 @@ class Person
 {
 
     public:
-        string first_name;
-        string last_name;
-        int phone_number;
+        string firstName;
+        string lastName;
+        int phoneNumber;
 
-        void set_name()
+        void setName()
         {
             cout << "What is the first name?: ";
-            cin >> first_name;
+            cin >> firstName;
 
             cout << "What is the last name?: ";
-            cin >> last_name;
+            cin >> lastName;
         }
 
-        void print_name()
+        void printName()
         {
-            cout << first_name << " " << last_name << endl;
+            cout << firstName << " " << lastName << endl;
         }
             
 };
@@ -31,29 +31,29 @@ class Worker:public Person
     public:
         string job;
 
-        void set_job()
+        void setJob()
         {
             cout << "Set the job: ";
             cin >> job;
         }
 
-        string print_job() {
-            cout << first_name << " " << last_name << "'s job is " << job;
+        string printJob() {
+            cout << firstName << " " << lastName << "'s job is " << job;
             return job;
         }
 
     private:
         int salary;
 
-        void set_salary()
+        void setSalary()
         {
             cout << "Set the salary: ";
             cin >> salary;
         }
 
-        int print_salary()
+        int printSalary()
         {
-            cout << first_name << " " << last_name << "'s salary is " << salary;
+            cout << firstName << " " << lastName << "'s salary is " << salary;
             return salary;
         }
 };
@@ -76,22 +76,22 @@ int main()
             running = false;
         } else if ((slot.compare("1w")) == 0)
         {
-            obj1.set_name();
+            obj1.setName();
         } else if ((slot.compare("2w")) == 0)
         {
-            obj2.set_name();
+            obj2.setName();
         } else if ((slot.compare("3w")) == 0)
         {   
-            obj3.set_name();
+            obj3.setName();
         } else if ((slot.compare("1r")) == 0)
         {   
-            obj1.print_name();
+            obj1.printName();
         } else if ((slot.compare("2r")) == 0)
         {   
-            obj2.print_name();
+            obj2.printName();
         } else if ((slot.compare("3r")) == 0)
         {   
-            obj3.print_name();
+            obj3.printName();
         } else
         {
             cout << "Error, invalid input\n";
