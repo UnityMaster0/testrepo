@@ -9,3 +9,4 @@ out/production/testrepo
 Python/__pycache__
 asm/test.o
 asm/test.elf
+py/__pycache__
