@@ -26,6 +26,7 @@ class Employee:
         self.listPay()
         print('')
 
+
 running = True
 
 while running == True:
@@ -39,7 +40,7 @@ while running == True:
         employee = Employee(name, job, pay)
 
     elif selector == 'view':
-        
+
         employee.listAll()
 
     elif selector == "quit":

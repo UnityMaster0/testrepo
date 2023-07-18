@@ -1,10 +1,11 @@
 .vscode
-C++/array
-C++/calculator
-C++/pointer
-C++/user
-C++/converter
-C++/converter.dSYM
+cpp/array
+cpp/calculator
+cpp/pointer
+cpp/user
+cpp/converter
+cpp/converter.dSYM
+cpp/datasize
 out/production/testrepo
 Python/__pycache__
 asm/test.o
