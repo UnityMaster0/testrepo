@@ -2,7 +2,7 @@
 .intel_syntax
 
 .section .text
-_start:
+    _start:
 
         mov %eax, 4
         mov %ebx, 1
@@ -15,5 +15,5 @@ _start:
         int 0x80
         
 .section .data
-        message:
+    message:
         .ascii "Hello, World\n"
