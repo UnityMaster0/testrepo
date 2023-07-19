@@ -10,7 +10,7 @@ public class Encryptor {
         System.out.println("Decrypted - " + decrypted);
     }
 
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
 
         User user1 = new User();
         User user2 = new User();

@@ -5,10 +5,13 @@ public class Adder {
     public static int add() {
 
         Scanner listener1 = new Scanner(System.in);
+
         System.out.println("What is your first value?: ");
         String s1 = listener1.nextLine();
+
         System.out.println("What is your second value?: ");
         String s2 = listener1.nextLine();
+
         listener1.close();
 
         int v1 = Integer.parseInt(s1);
@@ -18,8 +21,8 @@ public class Adder {
         return sum;
     }
 
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
 
-        System.out.println(add());
+        System.out.println("The sum of thoses two values is: " + add());
     }
 }

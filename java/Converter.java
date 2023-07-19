@@ -35,7 +35,7 @@ public class Converter {
         }
     }
 
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
         Scanner scanner1 = new Scanner(System.in);
 
         System.out.println("What is your value?: ");
