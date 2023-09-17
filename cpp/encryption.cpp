@@ -74,13 +74,13 @@ int main()
     For loops break up and reconstruct the message string
     */
     bool running = true;
-    while (running == true)
+    while (running)
     {
 
         cout << "What do you want to do: ";
         cin >> select;
 
-        if (select.compare("Encrypt") == 0)
+        if (select.compare("encrypt") == 0)
         {
 
             cout << "What is your message: ";
@@ -93,7 +93,7 @@ int main()
                 cout << encrypted[i] << endl;
             }
         }
-        else if (select.compare("Decrypt") == 0)
+        else if (select.compare("decrypt") == 0)
         {
 
             for (int i = 0; i < message.length(); i++)
@@ -104,7 +104,7 @@ int main()
             }
             cout << endl;
         }
-        else if (select.compare("Test") == 0)
+        else if (select.compare("test") == 0)
         {
 
             for (int i = 0; i < message.length(); i++)
@@ -112,7 +112,7 @@ int main()
                 test(message[i], user1.encrypt(message[i]), user2.decrypt(user1.encrypt(message[i])));
             }
         }
-        else if (select.compare("Read") == 0)
+        else if (select.compare("read") == 0)
         {
 
             for (int i = 0; i < message.length(); i++)
@@ -129,13 +129,13 @@ int main()
             }
             cout << endl;
         }
-        else if (select.compare("Quit") == 0)
+        else if (select.compare("quit") == 0)
         {
             running = false;
         }
         else
         {
-            cout << "Error";
+            cout << "Error" << endl;
         }
     }
 

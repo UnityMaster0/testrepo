@@ -1,0 +1,88 @@
+# Some data types and declartions
+let a: Int = 42
+let b: Float32 = 12.4
+let c: Float64 = 17.0
+
+# Parameters
+var text = "mojo is "
+fn fire_up(owned foo: String) -> String:
+   let foobar = foo + "🔥"
+   return foobar
+
+# Structs
+struct MyPair:
+    var first: Int
+    var second: Int
+
+    fn __init__(inout self, first: Int, second: Int):
+        self.first = first
+        self.second = second
+
+    fn __lt__(self, rhs: MyPair) -> Bool:
+        return self.first < rhs.first or
+              (self.first == rhs.first and
+               self.second < rhs.second)
+
+# Overloaded functions
+struct Complex:
+    var re: Float32
+    var im: Float32
+
+    fn __init__(inout self, x: Float32):
+        """Construct a complex number given a real number."""
+        self.re = x
+        self.im = 0.0
+
+    fn __init__(inout self, r: Float32, i: Float32):
+        """Construct a complex number given its real and imaginary components."""
+        self.re = r
+        self.im = i
+
+# Special Methods
+from memory.unsafe import Pointer
+struct HeapArray:
+    var data: Pointer[Int]
+    var size: Int
+    var cap: Int
+
+    fn __init__(inout self):
+        self.cap = 16
+        self.size = 0
+        self.data = Pointer[Int].alloc(self.cap)
+
+    fn __init__(inout self, size: Int, val: Int):
+        self.cap = size * 2
+        self.size = size
+        self.data = Pointer[Int].alloc(self.cap)
+        for i in range(self.size):
+            self.data.store(i, val)
+
+    fn __copyinit__(inout self, other: Self):
+        self.cap = other.cap
+        self.size = other.size
+        self.data = Pointer[Int].alloc(self.cap)
+        for i in range(self.size):
+            self.data.store(i, other.data.load(i))
+            
+    fn __del__(owned self):
+        self.data.free()
+
+    fn dump(self):
+        print_no_newline("[")
+        for i in range(self.size):
+            if i > 0:
+                print_no_newline(", ")
+            print_no_newline(self.data.load(i))
+        print("]")
+
+struct SIMD[type: DType, size: Int]:
+    
+    # Create a new SIMD from a number of scalars
+    fn __init__(inout self, *elems: SIMD[type, 1]):  ...
+
+# Entry Point
+fn main():
+   let foo = SIMD[DType.float32, 4]
+   let foobar = SIMD[DType.float32, 1]
+   print(fire_up(text))
+   
