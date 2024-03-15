@@ -1,4 +1,5 @@
-package constructors;
+package mytools;
+
 public class Constructor {
 
     private int one;
@@ -9,6 +10,14 @@ public class Constructor {
         one = x;
         two = y;
         three = z;
+    }
+
+    public int getOne() {
+        return one;
+    }
+
+    public void setOne(int x) {
+        this.one = x;
     }
 
     public int outputSum() {
