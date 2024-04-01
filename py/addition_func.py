@@ -1,11 +1,11 @@
 def add(*number):
 
-    base = 0
+    num = 0
 
     for n in number:
-        base += n
+        num += n
 
-    print(base)
+    print(num)
 
 
 add(*list(map(float, input("Enter the numbers (Put spaces between the numbers): ").split())))

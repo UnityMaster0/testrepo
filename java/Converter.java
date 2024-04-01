@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Converter {
 
-    public static double gram(int value, String convertingTo) {
+    public static double gram(int value, String convertingTo)
+    {
         if (convertingTo.equals("oz")) {
             return (value * 0.03527396);
         } else if (convertingTo.equals("lbs")) {
@@ -13,7 +14,8 @@ public class Converter {
         }
     }
 
-    public static double ounce(int value, String convertingTo) {
+    public static double ounce(int value, String convertingTo)
+    {
         if (convertingTo.equals("g")) {
             return (value * 28.34952);
         } else if (convertingTo.equals("lbs")) {
@@ -24,7 +26,8 @@ public class Converter {
         }
     }
 
-    public static double meter(int value, String convertingTo) {
+    public static double meter(int value, String convertingTo)
+    {
         if (convertingTo.equals("ft")) {
             return (value * 3.28084);
         } else if (convertingTo.equals("km")) {
@@ -35,7 +38,8 @@ public class Converter {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner scanner1 = new Scanner(System.in);
 
         System.out.println("What is your value?: ");

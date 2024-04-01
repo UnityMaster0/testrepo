@@ -1,8 +1,9 @@
 package mytools;
+
 public class CountLetters {
 
     private String word;
-    
+
     public CountLetters() {
         word = "Hello World";
     }
@@ -30,7 +31,7 @@ public class CountLetters {
             for (int u = 0; u < testingFor.length; u++)
                 if (split_word[i] == testingFor[u])
                     count++;
-        }      
+        }
         return count;
     }
 }

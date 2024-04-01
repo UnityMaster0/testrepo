@@ -23,7 +23,7 @@ public class Encryptor {
 
         String select;
         String message = null;
-        
+
         char[] split_message = null;
 
         long encrypted[] = null;

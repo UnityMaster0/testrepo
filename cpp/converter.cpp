@@ -3,7 +3,7 @@ using namespace std;
 
 class Unit
 {
-    
+
 public:
     int gram(string unit, int value)
     {
