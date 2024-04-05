@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Circuit {
 
-	private int num1;
-	private int num2;
-	private int[] bin1;
-	private int[] bin2;
+	private static int num1;
+	private static int num2;
+	private static int[] bin1;
+	private static int[] bin2;
 
 	public Circuit() {
 		num1 = 0;
@@ -21,7 +21,7 @@ public class Circuit {
 		setBins();
 	}
 
-	private void setBins() {
+	private static void setBins() {
 		// For bin1
 		String binString = Integer.toBinaryString(num1);
 		bin1 = new int[binString.length()];
@@ -67,13 +67,13 @@ public class Circuit {
 		StringBuilder sBuffer = new StringBuilder();
 
 		if (bin1.length >= bin2.length)
-			length = bin2.length;
+			length = bin2.length - 1;
 		else
-			length = bin1.length;
+			length = bin1.length - 1;
 
-		for (int i = 0; i < length; i++) {
-			s = (bin1[i] ^ bin2[i]) ^ cin;
-			cin = ((bin1[i] ^ bin2[i]) & cin) | (bin1[i] & bin2[i]);
+		for (int i = 0; i <= length; i++) {
+			s = bin1[length - i] ^ bin2[length - i] ^ cin;
+			cin = (bin1[length - i] & bin2[length - i]) | (cin & (bin1[length - i] ^ bin2[length - 1]));
 
 			sBuffer.insert(0, s);
 		}
