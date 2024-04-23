@@ -42,18 +42,13 @@ public class Circuit {
 	}
 
 	public void setNums() {
-		String input1, input2;
-
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("First number: ");
-		input1 = sc.nextLine();
+		num1 = Integer.parseInt(sc.nextLine());
 
 		System.out.println("Second number: ");
-		input2 = sc.nextLine();
-
-		num1 = Integer.parseInt(input1);
-		num2 = Integer.parseInt(input2);
+		num2 = Integer.parseInt(sc.nextLine());
 
 		sc.close();
 
@@ -61,24 +56,57 @@ public class Circuit {
 	}
 
 	public int fullAdder() {
-		int s = 0;
+		int length, s;
 		int cin = 0;
-		int length;
+		int counter = 0;
 		StringBuilder sBuffer = new StringBuilder();
+		int[] result;
+		
+		if (bin1.length > bin2.length) {
+			
+			result = new int[bin1.length];
+			length = bin1.length;
 
-		if (bin1.length >= bin2.length)
-			length = bin2.length - 1;
-		else
-			length = bin1.length - 1;
+			for (int i = 0; i < (bin1.length - bin2.length); i++) {
+				result[counter] = 0;
+				counter++;
+			}
 
-		for (int i = 0; i <= length; i++) {
+			for (int i = 0; i < bin2.length; i++) {
+				result[counter] = bin2[i];
+				counter++;
+			}
+
+			bin2 = result;
+
+		} else if (bin2.length > bin1.length) {
+			
+			result = new int[bin2.length];
+			length = bin2.length;
+
+			for (int i = 0; i < (bin2.length - bin1.length); i++) {
+				result[counter] = 0;
+				counter++;
+			}
+
+			for (int i = 0; i < bin1.length; i++) {
+				result[counter] = bin1[i];
+				counter++;
+			}
+
+			bin1 = result;
+
+		} else length = bin1.length;
+
+		for (int i = 1; i <= length; i++) {
 			s = bin1[length - i] ^ bin2[length - i] ^ cin;
-			cin = (bin1[length - i] & bin2[length - i]) | (cin & (bin1[length - i] ^ bin2[length - 1]));
+			cin = (bin1[length - i] & bin2[length - i]) | (cin & (bin1[length - i] ^ bin2[length - i]));
 
 			sBuffer.insert(0, s);
 		}
 
 		sBuffer.insert(0, cin);
+		
 		return Integer.parseInt(sBuffer.toString(), 2);
 	}
 }
