@@ -12,8 +12,8 @@ public class CountLetters {
         this.word = word;
     }
 
-    public void setWord(String newWord) {
-        word = newWord;
+    public void setWord(String word) {
+        this.word = word;
     }
 
     public int countChars(char... testingFor) {
@@ -28,8 +28,8 @@ public class CountLetters {
 
         // Count letters
         for (int i = 0; i < word.length(); i++) {
-            for (int u = 0; u < testingFor.length; u++)
-                if (split_word[i] == testingFor[u])
+            for (int u : testingFor)
+                if (split_word[i] == u)
                     count++;
         }
         return count;

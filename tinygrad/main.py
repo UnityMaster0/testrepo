@@ -14,3 +14,5 @@ class TinyNet:
     return x
 
 net = TinyNet()
+
+print(net)
