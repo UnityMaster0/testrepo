@@ -9,18 +9,29 @@ public class Circuit {
 	private static int[] bin1;
 	private static int[] bin2;
 
+	/**
+	 * Constructs a circuit object with num1 and num2 set to 0
+	 */
 	public Circuit() {
 		num1 = 0;
 		num2 = 0;
 		setBins();
 	}
 
+	/**
+	 * Constructs a circuit object with num1 and num2 set to x and y
+	 * @param x Value for num1
+	 * @param y Value for num2
+	 */
 	public Circuit(int x, int y) {
 		num1 = x;
 		num2 = y;
 		setBins();
 	}
 
+	/**
+	 * Sets bin1 and bin2 according to the current values of num1 and num2
+	 */
 	private static void setBins() {
 		// For bin1
 		String binString = Integer.toBinaryString(num1);
@@ -35,12 +46,20 @@ public class Circuit {
 			bin2[i] = Integer.parseInt(binString.substring(i, i + 1));
 	}
 
+	/**
+	 * Sets new values of num1 and num2. Also resets bin1 and bin2 according to the new nums
+	 * @param x Value for num1
+	 * @param y Value for num2
+	 */
 	public void setNums(int x, int y) {
 		num1 = x;
 		num2 = y;
 		setBins();
 	}
 
+	/**
+	 * Asks for scanner input to set num1 and num2. Also resets bin1 and bin2 according to the new nums
+	 */
 	public void setNums() {
 		Scanner sc = new Scanner(System.in);
 
@@ -55,6 +74,10 @@ public class Circuit {
 		setBins();
 	}
 
+	/**
+	 * Uses bin1 and bin2 to simulate a full adder circuit
+	 * @return The sum of bin1 and bin2 as an integer
+	 */
 	public int fullAdder() {
 		int length, s;
 		int cin = 0;
@@ -72,8 +95,8 @@ public class Circuit {
 				counter++;
 			}
 
-			for (int i = 0; i < bin2.length; i++) {
-				result[counter] = bin2[i];
+			for (int i : bin2) {
+				result[counter] = i;
 				counter++;
 			}
 
@@ -89,8 +112,8 @@ public class Circuit {
 				counter++;
 			}
 
-			for (int i = 0; i < bin1.length; i++) {
-				result[counter] = bin1[i];
+			for (int i : bin1) {
+				result[counter] = i;
 				counter++;
 			}
 
